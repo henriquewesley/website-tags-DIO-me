@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website - TAGS</title>
+</head>
+
+<body>
+  <h1 id="topo">Tags utilizadas nas aulas de HTML da <a href="https://web.dio.me/home">DIO.me</a></h1>
+  <hr />
+  <h2>Índice</h2>
+  <ul>
+    <li><a href="#html">O HTML "Não Semântico"</a></li>
+    <li><a href="#html5">O HTML Semântico</a></li>
+    <li><a href="#tags">Explicação das Tags Semânticas Principais</a></li>
+    <ol>
+      <li><a>&lt;Header&gt;</a></li>
+      <li><a>&lt;Nav&gt;</a></li>
+      <li><a>&lt;Main&gt;</a></li>
+      <li><a>&lt;Section&gt;</a></li>
+      <li><a>&lt;Article&gt;</a></li>
+      <li><a>&lt;Aside&gt;</a></li>
+      <li><a>&lt;Footer&gt;</a></li>
+    </ol>
+    <li><a href="#refer">Referências</a></li>
+  </ul><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <h2 id="html">O HTML "Não Semântico" (O jeito antigo)</h2>
+  <p>Antigamente, quando a gente queria criar uma página web, usávamos elementos genéricos para tudo, principalmente a
+    &lt;div&gt;.</p>
+  <ul>
+    <li>Precisa de um cabeçalho? &lt;div id="cabeçalho"&gt;.</li>
+    <li>Um menu de navegação? &lt;div id="menu"&gt;</li>
+    <li>O conteúdo principal? &lt;div id="conteudo"&gt;</li>
+    <li>Um rodapé? &lt;div id="rodape"&gt;</li>
+  </ul>
+  <p>Funciona? Sim. O site fica com a aparência que você quer (com a ajuda do CSS). Mas, para o navegador, para as
+    ferramentas de busca (como o Google) e para leitores de tela (usados por pessoas com deficiência visual), essa
+    estrutura é como um monte de caixas sem etiqueta. Ninguém sabe o que tem dentro de cada &lt;div&gt; sem ter que
+    olhar o id ou a class. É como um documento de texto sem títulos ou parágrafos, só um monte de texto corrido.</p>
+  <a href="#topo">voltar</a><br><br><br><br><br><br><br><br><br><br><br><br>
+  <h2 id="html5">O HTML Semântico (O jeito certo e moderno)</h2>
+  <p>O HTML Semântico resolve isso. Ele introduziu novas tags que têm um significado, uma semântica. Elas dizem
+    exatamente o que são.</p>
+  <p>Vamos refazer a mesma estrutura de antes, mas com tags semânticas:</p>
+  <ul>
+    <li>Para o cabeçalho, em vez de &lt;div id="cabeçalho"&gt;, usamos &lt;header&gt;.</li>
+    <li>Para o menu de navegação, em vez de &lt;div id="menu"&gt;, usamos &lt;nav&gt;.</li>
+    <li>Para o conteúdo principal, usamos &lt;main&gt;.</li>
+    <li>Para seções importantes dentro do conteúdo, usamos &lt;section&gt;.</li>
+    <li>Para um conteúdo mais independente, como um post de blog, usamos &lt;article&gt;.</li>
+    <li>Para uma barra lateral, usamos &lt;aside&gt;.</li>
+    <li>E para o rodapé, usamos &lt;footer&gt;.</li>
+  </ul>
+  <a href="#topo">voltar</a><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <h2 id="tags">Tags Semânticas Principais</h2>
+  <ol>
+    <li>&lt;Header&gt;</li><br>
+    <ul>
+      <li><b>O que é?</b> Representa o cabeçalho de uma página ou de uma seção. É o "cartão de visitas" do seu site.
+      </li>
+      <li><b>O que colocar dentro?</b> Geralmente contém o logo da empresa, o título principal da página (com
+        &lt;h1&gt;), um
+        campo
+        de busca e, muitas vezes, a navegação principal (&lt;nav&gt;).</li>
+      <li><B>Ponto importante:</B> Você pode ter mais de um &lt;header&gt; por página. Por exemplo, um &lt;article&gt;
+        (como um post de blog) pode ter seu próprio cabeçalho com o título do post e o nome do autor.</li>
+    </ul><br><br>
+    <li>&lt;Nav&gt;</li><br>
+    <ul>
+      <li><b>O que é?</b> A tag &lt;nav&gt; (de "navigation") é usada para agrupar os links de navegação mais
+        importantes do
+        seu site.</li>
+      <li><b>O que colocar dentro?</b> Menus principais, links para as seções mais importantes (como "Home", "Sobre",
+        "Produtos", "Contato"), ou até mesmo uma paginação em um blog.</li>
+      <li><B>Ponto importante:</B> Não use &lt;nav&gt; para qualquer grupo de links. Se você tem uma lista de links no
+        rodapé
+        para a política de privacidade e termos de uso, não precisa envolvê-los em uma &lt;nav&gt;. A tag é reservada
+        para a
+        navegação principal.</li>
+    </ul><br><br>
+    <li>&lt;Main&gt;</li><br>
+    <ul>
+      <li><b>O que é?</b> É o coração da sua página. Representa o conteúdo principal e único daquele documento.</li>
+      <li><b>O que colocar dentro?</b> O conteúdo que o usuário veio ver: o texto de um artigo, as fotos de uma galeria,
+        os produtos de uma loja, o formulário principal, etc.</li>
+      <li><B>Ponto importante:</B> Só pode existir uma tag &lt;main&gt; por página. Ela não deve incluir conteúdos que
+        se repetem em todo o site, como o cabeçalho, o rodapé ou a barra lateral.</li>
+    </ul><br><br>
+    <li>&lt;Section&gt;</li><br>
+    <ul>
+      <li><b>O que é?</b> Usada para agrupar conteúdos que têm um tema em comum, como um capítulo de um livro. É uma
+        seção temática dentro do seu conteúdo.</li>
+      <li><b>O que colocar dentro?</b> Por exemplo, em uma página inicial, você pode ter uma &lt;section&gt; para
+        "Nossos
+        Serviços", outra para "Depoimentos de Clientes" e uma terceira para "Últimas Notícias".</li>
+      <li><B>Ponto importante:</B> Uma &lt;section&gt; quase sempre deve ter um título (como &lt;h2&gt;, &lt;h3&gt;,
+        etc.) para identificar do que se trata aquele bloco de conteúdo. Se não faz sentido dar um título, talvez uma
+        &lt;div&gt; seja mais apropriada.</li>
+    </ul><br><br>
+    <li>&lt;Article&gt;</li><br>
+    <ul>
+      <li><b>O que é?</b> Representa um conteúdo completo e independente, que faria sentido por si só se fosse
+        distribuído em outro lugar (como em um feed de notícias ou RSS).</li>
+      <li><b>O que colocar dentro?</b> Um post de blog, uma notícia de jornal, um comentário de um usuário em um fórum,
+        um widget de previsão do tempo.</li>
+      <li><B>Ponto importante:</B> A principal diferença entre &lt;article&gt; e &lt;section&gt; é a independência. Um
+        &lt;article&gt;
+        pode ser "recortado" e colado em outro site e ainda fazer sentido. Uma &lt;section&gt; é apenas uma parte da
+        página atual. Você pode ter vários &lt;article&gt;s dentro de uma &lt;section&gt; (ex: uma seção de "Notícias"
+        com
+        vários artigos).</li>
+    </ul><br><br>
+    <li>&lt;Aside&gt;</li><br>
+    <ul>
+      <li><b>O que é?</b> Representa um conteúdo que está relacionado ao conteúdo principal, mas não é parte essencial
+        dele. É uma informação "ao lado".</li>
+      <li><b>O que colocar dentro?</b> A famosa "barra lateral" (sidebar) com links relacionados, biografias curtas,
+        publicidade, ou uma caixa de "saiba mais" dentro de um artigo.</li>
+      <li><B>Ponto importante:</B> A tag &lt;aside&gt; pode estar dentro do &lt;main&gt; (se for relacionada ao conteúdo
+        principal) ou fora dele (se for relacionada ao site como um todo).</li>
+    </ul><br><br>
+    <li>&lt;Footer&gt;</li><br>
+    <ul>
+      <li><b>O que é?</b> Representa o rodapé de uma página ou de uma seção.</li>
+      <li><b>O que colocar dentro?</b> Informações de copyright, links para documentos (termos de uso, política de
+        privacidade), informações de contato, mapa do site, etc.</li>
+      <li><B>Ponto importante:</B> Assim como o &lt;header&gt;, você pode ter mais de um &lt;footer&gt; por página. Um
+        &lt;article&gt;
+        pode ter seu próprio rodapé com informações sobre o autor ou tags relacionadas ao post.</li>
+    </ul>
+  </ol>
+  <a href="#topo">voltar</a>
+  <h2 id="refer">Referências</h2>
+  <a href="https://manus.im/app/TZhhLnJ9cEU1clGiNoyeMh"
+    target="_blank">https://manus.im/app/TZhhLnJ9cEU1clGiNoyeMh</a><br>
+  <a href="https://manus.im/app/OTHLxApasi3vjQGLVkGl8N" target="_blank">https://manus.im/app/OTHLxApasi3vjQGLVkGl8N</a>
+
+</body>
+
+</html>
